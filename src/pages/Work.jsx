@@ -48,7 +48,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.8 }}
                     className="mb-8 md:mb-12"
                 >
-                    <h2 className="text-lg md:text-2xl font-mono text-accent-500 mb-2 md:mb-4">/// PORTFOLIO_INDEX</h2>
+                    <h2 className="text-lg md:text-2xl font-mono text-accent-500 mb-2 md:mb-4">/// OUR WORK</h2>
                     <p className="text-gray-400 max-w-xl text-base md:text-lg">
                         A curated collection of digital experiences. We build with precision, animate with purpose, and design for impact.
                     </p>

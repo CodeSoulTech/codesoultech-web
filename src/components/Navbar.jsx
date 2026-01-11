@@ -134,7 +134,7 @@ const Navbar = () => {
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="
               fixed inset-0
-              bg-dark-900
+              bg-black
               md:hidden
               pt-24
               z-40
