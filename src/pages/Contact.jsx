@@ -23,15 +23,7 @@ const Contact = () => {
     const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Simulation for dummy keys or missing keys
-    if (!SERVICE_ID || SERVICE_ID.includes("dummy")) {
-      console.warn("Using dummy EmailJS keys. Simulating success.");
-      setTimeout(() => {
-        setSubmitted(true);
-        setLoading(false);
-      }, 1000);
-      return;
-    }
+
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
@@ -130,7 +122,7 @@ const Contact = () => {
                         <label className="text-sm text-gray-300">Name</label>
                         <input
                           type="text"
-                          name="user_name"
+                          name="name"
                           required
                           className="w-full rounded-lg px-4 py-3 bg-dark-800 border border-white/10 text-white focus:outline-none focus:border-accent-500 transition-colors"
                         />
@@ -140,7 +132,7 @@ const Contact = () => {
                         <label className="text-sm text-gray-300">Email</label>
                         <input
                           type="email"
-                          name="user_email"
+                          name="email"
                           required
                           className="w-full rounded-lg px-4 py-3 bg-dark-800 border border-white/10 text-white focus:outline-none focus:border-accent-500 transition-colors"
                         />
@@ -150,7 +142,7 @@ const Contact = () => {
                     <div className="mb-6 space-y-2">
                       <label className="text-sm text-gray-300">Project Type</label>
                       <select
-                        name="project_type"
+                        name="service"
                         className="w-full rounded-lg px-4 py-3 bg-dark-800 border border-white/10 text-white appearance-none focus:outline-none focus:border-accent-500 transition-colors"
                       >
                         <option value="Select a service...">Select a service...</option>
